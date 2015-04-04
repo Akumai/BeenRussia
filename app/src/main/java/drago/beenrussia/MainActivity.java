@@ -64,27 +64,29 @@ public class MainActivity extends FragmentActivity implements RegionsFragment.On
 
     public void switchFragment(MenuItem item){
         if (FragmentState == STATE_MAIN){
-            DrawMainFragment(item);
+            DrawNewFragment(item);
             FragmentState = STATE_ADD;
         } else {
-            DrawNewFragment(item);
+            DrawMainFragment(item);
             FragmentState = STATE_MAIN;
         }
     }
 
     // Главный экран, на котором изображены области
     private void DrawMainFragment(MenuItem item) {
-        item.setIcon(R.drawable.ic_action_accept);
+        item.setIcon(R.drawable.ic_action_new);
         getFragmentManager().beginTransaction()
                 .replace(R.id.container, new PlaceholderFragment())
+                .addToBackStack(null)
                 .commit();
     }
 
     // Экран со списком регионов
     private void DrawNewFragment(MenuItem item) {
-        item.setIcon(R.drawable.ic_action_new);
+        item.setIcon(R.drawable.ic_action_accept);
         getFragmentManager().beginTransaction()
                 .replace(R.id.container, new RegionsFragment())
+                .addToBackStack(null)
                 .commit();
 
     }
