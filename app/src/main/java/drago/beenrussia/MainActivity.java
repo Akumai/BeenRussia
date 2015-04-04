@@ -1,31 +1,25 @@
 package drago.beenrussia;
 
-import android.Manifest;
-import android.app.Activity;
-import android.app.ActionBar;
-import android.app.Fragment;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
-import android.widget.CheckBox;
-import android.widget.TextView;
 import android.support.v4.app.FragmentActivity;
 
+import java.util.ArrayList;
 
 
-public class MainActivity extends FragmentActivity implements RegionsFragment.OnFragmentInteractionListener {
+public class MainActivity extends FragmentActivity implements RegionsFragment.OnFragmentInteractionListener , RegionsViewFragment.OnFragmentInteractionListener  {
     // Состояние программы, добавляем или просматриваем регионы
     public int FragmentState;
 
     public static final byte STATE_MAIN = 0;
     public static final byte STATE_ADD = 1;
+
+    public static ArrayList<Region> regions;
+    public static ArrayList<Region> regionsChecked;
+    public RegionArrayAdapter regionAdapter = null;
+    public RegionsViewAdapter regionsViewAdapter = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +27,35 @@ public class MainActivity extends FragmentActivity implements RegionsFragment.On
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+                    .add(R.id.container, new RegionsViewFragment())
                     .commit();
             FragmentState = STATE_MAIN;
         }
+        regions = getRegionsList();
+        regionsChecked = new ArrayList<>();
+        updateRegionsCheckedList();
+        regionAdapter = new RegionArrayAdapter(this, R.layout.regions_row, regions);
+        regionsViewAdapter = new RegionsViewAdapter(this, R.layout.region_text, regionsChecked);
+    }
+
+    public void updateRegionsCheckedList() {
+        regionsChecked.clear();
+        for (int i =0; i< regions.size();i++){
+            Region cur = regions.get(i);
+            if (cur.isSelected()){
+                regionsChecked.add(cur);
+            }
+        }
+    }
+
+    private ArrayList<Region> getRegionsList() {
+        ArrayList<Region> regionsList = new ArrayList<>();
+        regionsList.add(new Region("Tula", false));
+        regionsList.add(new Region("Velikiy Novgorod", false));
+        regionsList.add(new Region("Nizhniy Novgorod", false));
+        regionsList.add(new Region("Kazan", false));
+        regionsList.add(new Region("Yaroslavl", false));
+        return regionsList;
     }
 
     @Override
@@ -67,6 +86,7 @@ public class MainActivity extends FragmentActivity implements RegionsFragment.On
             DrawNewFragment(item);
             FragmentState = STATE_ADD;
         } else {
+            updateRegionsCheckedList();
             DrawMainFragment(item);
             FragmentState = STATE_MAIN;
         }
@@ -76,7 +96,7 @@ public class MainActivity extends FragmentActivity implements RegionsFragment.On
     private void DrawMainFragment(MenuItem item) {
         item.setIcon(R.drawable.ic_action_new);
         getFragmentManager().beginTransaction()
-                .replace(R.id.container, new PlaceholderFragment())
+                .replace(R.id.container, new RegionsViewFragment())
                 .addToBackStack(null)
                 .commit();
     }
@@ -91,41 +111,8 @@ public class MainActivity extends FragmentActivity implements RegionsFragment.On
 
     }
 
-    public void onCheckboxClicked(View view) {
-        boolean checked = ((CheckBox) view).isChecked();
-
-        switch (view.getId()){
-            case R.id.cbUpItem:
-                TextView textView = (TextView) findViewById(R.id.txtUpItem);
-                textView.setTextColor(checked ? Color.BLUE : Color.WHITE);
-                break;
-            case R.id.cbDownItem:
-                TextView textViewDown = (TextView) findViewById(R.id.txtDown);
-                textViewDown.setTextColor(checked ? Color.BLUE : Color.WHITE);
-                break;
-        }
-
-    }
-
     @Override
     public void onFragmentInteraction(Uri uri) {
 
-    }
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            Log.i("MainActivity", "PlaceholderFragment.onCreateView");
-            return rootView;
-        }
     }
 }
