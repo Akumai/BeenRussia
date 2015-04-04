@@ -1,5 +1,6 @@
 package drago.beenrussia;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
@@ -16,6 +17,11 @@ import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
+    // Состояние пограммы, добавляем или просматриваем регионы
+    public int FragmentState;
+
+    public static final byte STATE_MAIN = 0;
+    public static final byte STATE_ADD = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,7 @@ public class MainActivity extends Activity {
             getFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
+            FragmentState = STATE_MAIN;
         }
     }
 
@@ -40,14 +47,25 @@ public class MainActivity extends Activity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch(item.getItemId()){
+            case R.id.action_share:
+                switchFragment(item);
+                return true;
+            case R.id.action_add:
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void switchFragment(MenuItem item){
+        if (FragmentState == STATE_MAIN){
+            item.setIcon(R.drawable.ic_action_accept);
+        } else {
+            item.setIcon(R.drawable.ic_action_new);
+        }
+
+
     }
 
     public void onCheckboxClicked(View view) {
