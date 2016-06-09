@@ -1,5 +1,6 @@
 package drago.beenrussia;
 
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -50,11 +51,18 @@ public class MainActivity extends FragmentActivity implements RegionsFragment.On
 
     private ArrayList<Region> getRegionsList() {
         ArrayList<Region> regionsList = new ArrayList<>();
-        regionsList.add(new Region("Tula", false));
+        Resources res = getResources();
+        String[] regionNames = res.getStringArray(R.array.region_name_titles);
+        String[] regionValues = res.getStringArray(R.array.region_name_values);
+
+        for (int i = 0; i < regionNames.length; i++){
+            regionsList.add(new Region(regionNames[i], regionValues[i], false));
+        }
+/*
         regionsList.add(new Region("Velikiy Novgorod", false));
         regionsList.add(new Region("Nizhniy Novgorod", false));
         regionsList.add(new Region("Kazan", false));
-        regionsList.add(new Region("Yaroslavl", false));
+        regionsList.add(new Region("Yaroslavl", false));*/
         return regionsList;
     }
 

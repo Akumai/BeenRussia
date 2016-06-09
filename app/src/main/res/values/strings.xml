@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">BeenRussia</string>
@@ -6,6 +5,263 @@
     <string name="action_add">+</string>
     <string name="action_add_confirm">v</string>
     <string name="region_name_hint">Enter the region name</string>
+
+    <string-array name="region_name_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>83</item>
+        <item>86</item>
+        <item>87</item>
+        <item>89</item>
+    </string-array>
+    <string-array name="region_name_titles">
+        <item>Republic of Adygea</item>
+        <item> Republic of Bashkortostan</item>
+        <item>The Republic of Buryatia</item>
+        <item>Republic of Altai (Gorny Altai)</item>
+        <item>The Republic of Dagestan</item>
+        <item>The Republic of Ingushetia</item>
+        <item>Kabardino-Balkar Republic</item>
+        <item>Republic of Kalmykia</item>
+        <item>The Republic of Karachay-Cherkessia</item>
+        <item>The Republic of Karelia</item>
+        <item>Komi Republic</item>
+        <item>Mari El Republic</item>
+        <item>The Republic of Mordovia</item>
+        <item>The Republic of Sakha (Yakutia)</item>
+        <item>Republic of North Ossetia-Alania</item>
+        <item>Republic of Tatarstan</item>
+        <item>Tyva Republic</item>
+        <item>Udmurt republic</item>
+        <item>The Republic of Khakassia</item>
+        <item>Republic of Chechnya</item>
+        <item>Chuvash Republic</item>
+        <item>Altai region</item>
+        <item>Krasnodar region</item>
+        <item>Krasnoyarsk region</item>
+        <item>Primorsky Krai</item>
+        <item>Stavropol region</item>
+        <item>Khabarovsk region</item>
+        <item>Amur region</item>
+        <item>Arhangelsk region</item>
+        <item>Astrakhan region</item>
+        <item>Belgorod region</item>
+        <item>Bryansk region</item>
+        <item>Vladimir region</item>
+        <item>Volgograd region</item>
+        <item>Vologda Region</item>
+        <item>Voronezh region</item>
+        <item>Ivanovo region</item>
+        <item>Irkutsk region</item>
+        <item>Kaliningrad region</item>
+        <item>Kaluga region</item>
+        <item>Kamchatka Krai</item>
+        <item>Kemerovo region</item>
+        <item>Kirov region</item>
+        <item>Kostroma region</item>
+        <item>Kurgan region</item>
+        <item>Kursk region</item>
+        <item>Leningrad region</item>
+        <item>Lipetsk region</item>
+        <item>Magadan Region</item>
+        <item>Moscow region</item>
+        <item>Murmansk region</item>
+        <item>Nizhny Novgorod Region</item>
+        <item>Novgorod region</item>
+        <item>Novosibirsk region</item>
+        <item>Omsk region</item>
+        <item>Orenburg region</item>
+        <item>Oryol Region</item>
+        <item>Penza region</item>
+        <item>Perm Krai</item>
+        <item>Pskov region</item>
+        <item>Rostov region</item>
+        <item>Ryazan Oblast</item>
+        <item>Samara Region</item>
+        <item>Saratov region</item>
+        <item>Sakhalin region</item>
+        <item>Sverdlovsk region</item>
+        <item>Smolensk region</item>
+        <item>Tambov Region</item>
+        <item>Tver region</item>
+        <item>Tomsk region</item>
+        <item>Tula region</item>
+        <item>Tyumen region</item>
+        <item>Ulyanovsk region</item>
+        <item>Chelyabinsk region</item>
+        <item>Transbaikal region</item>
+        <item>Yaroslavl region</item>
+        <item>Moscow</item>
+        <item>St. Petersburg</item>
+        <item>Jewish Autonomous Region</item>
+        <item>Nenets Autonomous Okrug</item>
+        <item>Khanty-Mansi Autonomous District - Yugra</item>
+        <item>Chukotka Autonomous Okrug</item>
+        <item>Yamalo-Nenets Autonomous Okrug</item>
+    </string-array>
+
+    <string-array name="region_name_titles_rus">
+        <item>Республика Адыгея</item>
+        <item>Республика Башкортостан</item>
+        <item>Республика Бурятия</item>
+        <item>Республика Алтай (Горный Алтай)</item>
+        <item>Республика Дагестан</item>
+        <item>Республика Ингушетия</item>
+        <item>Кабардино-Балкарская Республика</item>
+        <item>Республика Калмыкия</item>
+        <item>Республика Карачаево-Черкессия</item>
+        <item>Республика Карелия</item>
+        <item>Республика Коми</item>
+        <item>Республика Марий Эл</item>
+        <item>Республика Мордовия</item>
+        <item>Республика Саха (Якутия)</item>
+        <item>Республика Северная Осетия-Алания</item>
+        <item>Республика Татарстан</item>
+        <item>Республика Тыва</item>
+        <item>Удмуртская Республика</item>
+        <item>Республика Хакасия</item>
+        <item>Республика Чечня</item>
+        <item>Чувашская Республика</item>
+        <item>Алтайский край</item>
+        <item>Краснодарский край</item>
+        <item>Красноярский край</item>
+        <item>Приморский край</item>
+        <item>Ставропольский край</item>
+        <item>Хабаровский край</item>
+        <item>Амурская область</item>
+        <item>Архангельская область</item>
+        <item>Астраханская область</item>
+        <item>Белгородская область</item>
+        <item>Брянская область</item>
+        <item>Владимирская область</item>
+        <item>Волгоградская область</item>
+        <item>Вологодская область</item>
+        <item>Воронежская область</item>
+        <item>Ивановская область</item>
+        <item>Иркутская область</item>
+        <item>Калининградская область</item>
+        <item>Калужская область</item>
+        <item>Камчатский край</item>
+        <item>Кемеровская область</item>
+        <item>Кировская область</item>
+        <item>Костромская область</item>
+        <item>Курганская область</item>
+        <item>Курская область</item>
+        <item>Ленинградская область</item>
+        <item>Липецкая область</item>
+        <item>Магаданская область</item>
+        <item>Московская область</item>
+        <item>Мурманская область</item>
+        <item>Нижегородская область</item>
+        <item>Новгородская область</item>
+        <item>Новосибирская область</item>
+        <item>Омская область</item>
+        <item>Оренбургская область</item>
+        <item>Орловская область</item>
+        <item>Пензенская область</item>
+        <item>Пермский край</item>
+        <item>Псковская область</item>
+        <item>Ростовская область</item>
+        <item>Рязанская область</item>
+        <item>Самарская область</item>
+        <item>Саратовская область</item>
+        <item>Сахалинская область</item>
+        <item>Свердловская область</item>
+        <item>Смоленская область</item>
+        <item>Тамбовская область</item>
+        <item>Тверская область</item>
+        <item>Томская область</item>
+        <item>Тульская область</item>
+        <item>Тюменская область</item>
+        <item>Ульяновская область</item>
+        <item>Челябинская область</item>
+        <item>Забайкальский край</item>
+        <item>Ярославская область</item>
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Еврейская автономная область</item>
+        <item>Ненецкий автономный округ</item>
+        <item>Ханты-Мансийский автономный округ - Югра</item>
+        <item>Чукотский автономный округ</item>
+        <item>Ямало-Ненецкий автономный округ</item>
+    </string-array>
 
 </resources>
 

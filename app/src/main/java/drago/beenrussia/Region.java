@@ -5,11 +5,13 @@ package drago.beenrussia;
  */
 public class Region {
     private String name = null;
+    private String code = null;
     private boolean selected = false;
 
-    public Region(String name, boolean selected) {
+    public Region(String name, String code, boolean selected) {
         super();
         this.name = name;
+        this.code = code;
         this.selected = selected;
     }
 
@@ -18,6 +20,13 @@ public class Region {
     }
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public boolean isSelected() {

@@ -56,8 +56,9 @@ public class RegionsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            regionParam = (ArrayList<Region>)getArguments().getSerializable(ARG_REGION_LIST);
+        Bundle arguments = getArguments();
+        if (arguments != null) {
+            regionParam = (ArrayList<Region>) arguments.getSerializable(ARG_REGION_LIST);
         }
 
         Log.i("MainActivity", "RegionsFragment.onCreate");
