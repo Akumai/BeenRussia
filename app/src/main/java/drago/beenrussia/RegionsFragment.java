@@ -1,16 +1,13 @@
 package drago.beenrussia;
 
-import android.app.Activity;
+import android.app.Fragment;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -27,11 +24,6 @@ public class RegionsFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_REGION_LIST = "region_list";
-
-    // TODO: Rename and change types of parameters
-    private ArrayList<Region> regionParam;
-
-    private OnFragmentInteractionListener mListener;
 
     /**
      * Use this factory method to create a new instance of
@@ -58,7 +50,7 @@ public class RegionsFragment extends Fragment {
         super.onCreate(savedInstanceState);
         Bundle arguments = getArguments();
         if (arguments != null) {
-            regionParam = (ArrayList<Region>) arguments.getSerializable(ARG_REGION_LIST);
+            ArrayList<Region> regionParam = (ArrayList<Region>) arguments.getSerializable(ARG_REGION_LIST);
         }
 
         Log.i("MainActivity", "RegionsFragment.onCreate");
@@ -94,20 +86,8 @@ public class RegionsFragment extends Fragment {
     }*/
 
     @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        try {
-            mListener = (OnFragmentInteractionListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
-
-    @Override
     public void onDetach() {
         super.onDetach();
-        mListener = null;
     }
 
     /**
