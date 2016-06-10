@@ -73,7 +73,7 @@ public class RegionsViewFragment extends Fragment {
         ListView listView = (ListView) rootView.findViewById(R.id.listView);
         listView.setAdapter(activity.regionsViewAdapter);
         TextView textView = (TextView) rootView.findViewById(R.id.textMap);
-        textView.setText("cities" + activity.regionsChecked.toArray().length);
+        textView.setText("cities" + MainActivity.regionsChecked.toArray().length);
         return rootView;
     }
 
@@ -113,7 +113,7 @@ public class RegionsViewFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        public void onFragmentInteraction(Uri uri);
+        void onFragmentInteraction(Uri uri);
     }
 
 }
