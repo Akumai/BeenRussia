@@ -1,12 +1,12 @@
 <resources>
 
-    <string name="app_name">BeenRussia</string>
-    <string name="action_share">Share</string>
-    <string name="action_add">+</string>
-    <string name="action_add_confirm">v</string>
+    <string name="app_name" translatable="false">BeenRussia</string>
+    <string name="action_share" translatable="false">Share</string>
+    <string name="action_add" translatable="false">+</string>
+    <string name="action_add_confirm" translatable="false">v</string>
     <string name="region_name_hint">Enter the region name</string>
 
-    <string-array name="region_name_values">
+    <string-array name="region_name_values" translatable="false">
         <item>1</item>
         <item>2</item>
         <item>3</item>
