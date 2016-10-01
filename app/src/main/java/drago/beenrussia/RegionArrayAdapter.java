@@ -34,7 +34,9 @@ public class RegionArrayAdapter extends ArrayAdapter<Region> {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         ViewHolder holder;
-        Log.v("ConvertView", String.valueOf(position));
+        if (BuildConfig.DEBUG){
+            Log.v("ConvertView", String.valueOf(position));
+        }
 
         if (convertView == null) {
             LayoutInflater vi = (LayoutInflater)getContext().getSystemService(

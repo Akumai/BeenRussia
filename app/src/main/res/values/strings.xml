@@ -5,6 +5,7 @@
     <string name="action_add" translatable="false">+</string>
     <string name="action_add_confirm" translatable="false">v</string>
     <string name="region_name_hint">Enter the region name</string>
+    <string name="preferences_saved_regions">saved_regions</string>
 
     <string-array name="region_name_values" translatable="false">
         <item>1</item>
